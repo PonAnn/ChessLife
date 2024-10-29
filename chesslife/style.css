@@ -1,0 +1,483 @@
+.goTop {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s;
+  .inner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffdce5;
+    position: fixed;
+    z-index: 5;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner:hover {
+    transform: scale(1.1);
+  }
+}
+
+.show {
+  display: block;
+}
+
+
+
+h2 {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+/* Main */
+section.home {
+  background-color: #faebd7;
+  width: 100%;
+  /* height: 97vh; */
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 100/1920*100 */
+    gap: 5.208vw;
+    padding: clamp(50px, 3.125vw, 60px) clamp(20px, 5.2083vw, 100px) ;
+    margin: 0 auto;
+    .headshot {
+      flex: 1;
+      .pic {
+        border-radius: 30px;
+        overflow: hidden;
+        width: 300px; 
+        picture {
+          display: block;
+          height: 100%;
+        } 
+      }
+    }
+    
+    .introduce {
+      flex: 2;
+      h3 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    }
+    .btn-list {
+      width: 65%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      gap: 30px;
+      .btn {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-size: 24px;
+        transition: all .5s;
+      }
+      .resume {
+        background: #adcfeb;
+      }
+      .resume:hover {
+        background: #1a4d77;
+        color: white;
+      }
+      .experience {
+        background: #e7e47a;
+      }
+      .experience:hover {
+        background: #bfb03e;
+        color: white;
+      }
+  
+      .chess {
+        background: #eb9a70;
+      }
+      .chess:hover {
+        background: #e36523;
+        color: white;
+      }
+    }
+  }
+}
+
+/* Photo Swiper */
+section.photo-swiper {
+  width: 100%;
+  padding: clamp(30px, 5.2083vw, 100px) 0;
+  .swiper {
+    width: 80%;
+    height: auto;
+    padding: 50px 0 !important; 
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pic {
+      object-fit: contain;
+      overflow: hidden;
+      max-height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* Resume */
+section.resume {
+  padding: 0 0 100px;
+  background: #b3d8f6;
+  .container {
+    margin: 30px auto 0;
+    width: 65%;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  }
+}
+
+/* experience */
+section.experience {
+  .container {
+    padding: 50px 0;
+    width: 80%;
+    margin: auto;
+    .item {
+      padding: 30px;
+      height: 100%;
+      max-width: 450px;
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      background: #ecf8ff;
+      border-radius: 30px;
+      flex: 1;
+      .pic {
+        border-radius: 10px;
+        overflow: hidden;
+        object-fit: contain;
+        max-width: 450px;
+        max-height: 300px;
+        width: 100%;
+        height: 350px;
+        img {
+          border-radius: 10px;
+          transition: all .4s;
+        }
+        img:hover {
+          transform: scale(1.1);
+          /* transition: scale .3s; */
+        }
+      }
+      .inner {
+        flex: 1;
+        .top {
+          padding: 20px 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            font-size: 20px;
+          }
+        }
+        .bottom {
+          padding: 20px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          border-top: 1px solid rgba(0, 0, 0, .1);
+          h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+          }
+          p {
+            font-size: 16px;
+            text-align: left;
+          }
+        }
+      }
+      .pic-vertical {
+        img {
+          object-position: top;
+        }
+      }
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 !important;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+/* chess */
+section.chess {
+  background-color: #faebd7;
+  padding: 0 0 clamp(30px, 5.2083vw, 100px) 0;
+  .container {
+    .item {
+      margin: 50px 0 150px;
+      /* width: 65%; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+      .info {
+        width: 20%;
+        /* margin-right: 100px; */
+        p {
+          font-size: 22px;
+        }
+      }
+      .pic {
+        width: 25%;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .chessPic {
+        transition: all .6s;
+      }
+      .chessPic:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+
+/* RWD */
+@media screen and (max-width: 1200px) {
+  .scroll-btn {
+    .inner {
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+  h2 {
+    font-size: 48px;
+    padding-top: 60px; 
+  }
+  section.home {
+    .container {
+      .introduce {
+        h3 {
+          font-size: 36px;
+        }
+        h4 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      }
+      .btn-list {
+        .btn {
+          width: 120px;
+          height: 120px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  section.resume {
+    .container {
+      h3 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  section.experience {
+    .container {
+      padding: 0 0 50px 0;
+    }
+  }
+  section.chess {
+    .container {
+      .item {
+        .info {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.home {
+    .container {
+      flex-direction: column;
+      .btn-list {
+        flex-direction: row;
+      }
+    }
+  }
+  section.resume {
+    .container {
+      width: 85%;
+    }
+  }
+  section.chess {
+    .container {
+      .item {
+        margin: 50px 0 100px;
+        gap: 30px;
+        .info {
+          width: 25%;
+        }
+        .pic {
+          width: 30%;
+        }
+        .chessPic:hover {
+          transform: none
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .scroll-btn {
+    .inner {
+      opacity: .7;
+    }
+  }
+  section.resume {
+    .container {
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  section.experience {
+    .container {
+      width: 90%;
+    }
+  }
+  section.chess {
+    .container {
+      .item {
+        /* margin: 50px 0 100px; */
+        /* gap: 30px; */
+        flex-direction: column;
+        .info {
+          width: 80%;
+        }
+        .pic {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  h2 {
+    font-size: 38px;
+    /* padding-top: 30px;  */
+  }
+  section.home {
+    .container {
+      .btn-list {
+        .btn {
+          width: 90px;
+          height: 90px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  section.chess {
+    .container {
+      .item {
+        margin: 30px 0 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section.home {
+    .container {
+      .btn-list {
+        .btn {
+          width: 80px;
+          height: 80px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
